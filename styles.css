@@ -1,0 +1,267 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto:wght@400;700&display=swap");
+
+:root {
+  font-size: calc(0.625rem + 0.4vw);
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 5fr;
+  grid-template-areas:
+    "sidebar header"
+    "sidebar main";
+  height: 100vh;
+  width: 100vw;
+}
+
+/* HEADER */
+
+.header {
+  grid-area: header;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  margin: 10px 70px 5px 20px;
+}
+
+.bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  padding: 0 20px;
+}
+
+/* SEARCH BAR */
+
+.wrapper {
+  position: relative;
+  display: flex;
+  min-width: 100px;
+}
+
+.search-icon {
+  position: absolute;
+  top: 6px;
+  left: 8px;
+  width: 14px;
+}
+
+.clear-icon {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 10px;
+  cursor: pointer;
+  visibility: hidden;
+}
+
+.search {
+  border: none;
+  border-radius: 20px;
+  height: 20px;
+  width: 500px;
+  padding: 2px 23px 2px 30px;
+  outline: 0;
+  background-color: #e4e4e4;
+}
+
+.search:hover,
+.search:focus {
+  border: 1.5px solid #009688;
+  background-color: white;
+}
+
+.user-base {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.profile *,
+.user-base * {
+  margin: 0;
+}
+
+.greeting {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile-pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.greeting .profile-pic {
+  width: 80px;
+  height: 80px;
+}
+
+.btn-group {
+  display: flex;
+  gap: 20px;
+}
+
+.btn-group button {
+  background-color: #1992d4;
+  color: #ffffff;
+  border: none;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 10px 40px;
+}
+
+/* SIDEBAR */
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: #1992d4;
+  color: #ffffff;
+  font-weight: 700;
+  display: grid;
+  grid-template-rows: 1fr 2fr 3fr;
+  border-radius: 20px 0 0 20px;
+}
+
+.logo {
+  height: 100px;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 20px;
+}
+
+ul li {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: auto;
+  grid-template-areas: "img text";
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 20px;
+}
+
+.sidebar-nav1 img {
+  grid-area: img;
+}
+
+.sidebar-nav1 .nav-text {
+  grid-area: text;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* MAIN */
+
+.main {
+  grid-area: main;
+  background-color: #e2e8f0;
+  padding: 20px 20px;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  /* grid-template-areas: "project updates"; */
+}
+
+.main h3 {
+  margin: 0 0 15px;
+}
+
+/* CONTENT */
+
+.con-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.content {
+  width: max(40%, 300px);
+  height: 200px;
+  background-color: #ffffff;
+  border: 0 solid orange;
+  border-left: 10px solid orange;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 5px 5px 5px 0 #d2d2d2;
+}
+
+/* CURRENT */
+
+.current {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.feed {
+  height: 350px;
+  width: 250px;
+  background-color: #ffffff;
+  padding: 30px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px 0 #d2d2d2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.updates {
+  font-size: 0.8rem;
+}
+
+.user-ranking {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: space-around;
+  gap: 10px;
+  height: 350px;
+  width: 250px;
+  background-color: #ffffff;
+  padding: 30px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px 0 #d2d2d2;
+  font-size: 1rem;
+}
+
+.trending h3 {
+  margin: 20px auto 10px;
+}
+
+.trending img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.rank1,
+.rank2,
+.rank3,
+.rank4 {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.usernames * {
+  margin: 0;
+}
